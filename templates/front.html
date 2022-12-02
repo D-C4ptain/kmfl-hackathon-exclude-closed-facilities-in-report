@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<!--[if lt IE 10]>
+    <html lang="en" class="no-js lt-ie10 lt-ie9 lt-ie8 lt-ie7">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Kenya Master Facility and Community Units Database Admin</title>
+    
+    <link rel="icon"  href="https://admin.kmhfltest.health.go.ke/assets/img/kenya-coat-of-arms.png" />
+    <link rel="stylesheet" type="text/css" href="https://admin.kmhfltest.health.go.ke/assets/mfl-admin-frontend-0.0.1a49.css" />
+    </head>
+    <section class="section">
+        <div style="padding:100px 50px 50px 50px;min-height:400px">
+            <h1><strong>Kenya Master Health Facility List website:</strong></h1>
+            <h1>Your browser version is not supported. Please update your browser.</h1>
+               <h2>You may install any of the latest versions of the following browsers:</h2>
+                <div class="container-fluid" style="margin-top:30px;margin-bottom:30px;">
+                    <div class="row-fluid">
+                        <div class="col-xs-3 row-fluid">
+                           <a target="blank" href="https://www.google.com/chrome/browser/desktop/index.html"><i class="sprite sprite-chrome"></i></a>
+                            Chrome
+                        </div>
+                        <div class="col-xs-3 row-fluid">
+                           <a target="blank" href="https://www.mozilla.org/en-US/firefox/new/"><i class="sprite sprite-firefox"></i></a>
+                            Firefox
+                        </div>
+                        <div class="col-xs-3 row-fluid">
+                           <a target="blank" href="http://windows.microsoft.com/en-us/internet-explorer/download-ie"><i class="sprite sprite-ie"></i></a>
+                            Internet Explorer
+                        </div>
+                        <div class="col-xs-3 row-fluid">
+                           <a target="blank" href="http://www.opera.com/computer"><i class="sprite sprite-opera"></i></a>
+                            Opera
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </section>
+<![endif]-->
+<!--[if gt IE 9]><!-->
+<html class="no-js indexeddb" lang="en" ng-app="mflAdminApp">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+         <title>Kenya Health Master Facility List (KMHFL)</title>
+        <link rel="icon"  href="https://admin.kmhfltest.health.go.ke/assets/img/kenya-coat-of-arms.png" />
+        <link rel="stylesheet" type="text/css" href="https://admin.kmhfltest.health.go.ke/assets/mfl-admin-frontend-0.0.1a49.css" />
+        <link rel="stylesheet" type="text/css" href="https://admin.kmhfltest.health.go.ke/assets/css/custom.css" />
+
+
+
+     <!-- Add icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+
+    <title>Document</title>
+</head>
+
+<noscript>
+    <section class="section">
+        <div style="padding:50px 50px 50px 50px;height:100vh">
+            <h1><strong>Kenya Master Health Facility List:</strong></h1>
+            <h2>The browser has JavaScript disabled or is not supported. Please enable Javascript or update your browser.</h2>
+                <h3>You may install any of the latest versions of the following browsers:</h3>
+                <div class="container-fluid" style="margin-top:30px">
+                    <div class="row-fluid">
+                        <div class="col-xs-3">
+                           <a target="blank" href="https://www.google.com/chrome/browser/desktop/index.html"><i class="sprite sprite-chrome"></i></a>
+                            Chrome
+                        </div>
+                        <div class="col-xs-3">
+                           <a target="blank" href="https://www.mozilla.org/en-US/firefox/new/"><i class="sprite sprite-firefox"></i></a>
+                            Firefox
+                        </div>
+                        <div class="col-xs-3">
+                           <a target="blank" href="http://windows.microsoft.com/en-us/internet-explorer/download-ie"><i class="sprite sprite-ie"></i></a>
+                            Internet Explorer
+                        </div>
+                        <div class="col-xs-3">
+                           <a target="blank" href="http://www.opera.com/computer"><i class="sprite sprite-opera"></i></a>
+                            Opera
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </section>
+</noscript>
+<!--<![endif]-->
+<script src="//localhost:35729/livereload.js"></script>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-65771802-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+
+
+<body>
+
+    <style>
+        .btn {
+            background-color: DodgerBlue;
+            border: none;
+            color: white;
+            padding: 12px 30px;
+            cursor: pointer;
+            font-size: 20px;
+            }
+
+            /* Darker background on mouse-over */
+        .btn:hover {
+            background-color: RoyalBlue;
+            color: white;
+            }
+    </style>
+
+    <div class="right" style="position:relative;left: 1100px; color:white;" >
+        <h2>Export Facilities</h2>
+
+        <!-- Auto width -->
+        <button class="btn"><i class="fa fa-download"></i>
+            <a href="{% url 'download' %}"download>Export Facilities</a>
+        </button>
+    </div>
+
+
+
+
+<div ui-view="main" class="margin-t-0 container-fluid">
+    <div>
+        <div class="main-ui-view-loader">
+            <div class="loader"></div>
+            <div class="row">
+                <h3 class="text-center loader-text">Please wait...</h3>
+            </div>
+        </div>
+    </div>
+</div>
+<footer>
+    <div class="col-xs-12 black">
+       <div class="row margin-10">
+        <p class="text-center margin-t-10">
+            &copy; Copyright 2017 - <script>document.write(new Date().getFullYear())</script>,
+                <a href="http://health.go.ke/" target="_blank">
+                  Republic of Kenya, Ministry of Health.
+                </a>
+
+        </p>
+       </div>
+    </div>
+</footer>
+<!-- compiled JavaScript -->
+
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/vendor/jquery/dist/jquery.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/vendor/underscore/underscore.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/vendor/bootstrap/dist/js/bootstrap.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/vendor/angular/angular.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/vendor/spin.js/spin.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/vendor/leaflet/dist/leaflet-src.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/vendor/angular-animate/angular-animate.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/vendor/angular-bootstrap/ui-bootstrap.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/vendor/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/vendor/angular-ui-router/release/angular-ui-router.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/vendor/angular-ui-select/dist/select.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/vendor/leaflet.markercluster/dist/leaflet.markercluster.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/vendor/angular-sanitize/angular-sanitize.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/vendor/angular-simple-logger/dist/angular-simple-logger.light.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/vendor/leaflet-plugins/layer/tile/Google.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/vendor/angular-leaflet-directive/dist/angular-leaflet-directive.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/vendor/modernizr/modernizr.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/vendor/stacktrace-js/dist/stacktrace.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/vendor/angularjs-dropdown-multiselect/src/angularjs-dropdown-multiselect.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/vendor/ng-tags-input/ng-tags-input.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/vendor/moment/moment.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/vendor/d3/d3.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/vendor/c3/c3.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/vendor/angular-loading-bar/build/loading-bar.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/vendor/ng-idle/angular-idle.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/vendor/angular-auto-validate/dist/jcs-auto-validate.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/vendor/angular-toasty/dist/angular-toasty.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/vendor/angularjs-datepicker/src/js/angular-datepicker.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/vendor/ng-file-upload/ng-file-upload.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/libs/api_wrapper.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/libs/sil_grid/sil_grid_tpls.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/libs/sil_grid/sil_grid.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/libs/error_handler.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/libs/datepicker.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/settings.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/src/app/admin_offices/controllers.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/src/app/admin_offices/module.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/src/app/admin_offices/services.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/src/app/admin_offices/states.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/src/app/app.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/src/app/auth/controllers.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/src/app/auth/module.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/src/app/auth/oauth2.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/src/app/auth/permissions.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/src/app/auth/services.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/src/app/auth/states.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/src/app/chul/controllers/approve.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/src/app/chul/controllers/create.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/src/app/chul/controllers/edit.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/src/app/chul/controllers/list.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/src/app/chul/controllers/module.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/src/app/chul/module.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/src/app/chul/services.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/src/app/chul/states/approve.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/src/app/chul/states/base.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/src/app/chul/states/create.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/src/app/chul/states/list.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/src/app/chul/states/module.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/src/app/chul/states/view.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/src/app/common/constants.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/src/app/common/controllers.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/src/app/common/directives/contentheader.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/src/app/common/directives/contentslidein.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/src/app/common/directives/list.assignment.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/src/app/common/directives/module.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/src/app/common/directives/statemodal.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/src/app/common/directives/ui.bootstrap.popover.close.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/src/app/common/export.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/src/app/common/filters.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/src/app/common/forms.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/src/app/common/messages.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/src/app/common/module.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/src/app/common/revision.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/src/app/common/services.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/src/app/common/states.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/src/app/config.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/src/app/dashboard/controllers.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/src/app/dashboard/module.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/src/app/dashboard/services.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/src/app/dashboard/states.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/src/app/downloads/controllers.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/src/app/downloads/module.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/src/app/downloads/routes.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/src/app/downloads/services.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/src/app/facility_mgmt/controllers/approve.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/src/app/facility_mgmt/controllers/create.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/src/app/facility_mgmt/controllers/edit.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/src/app/facility_mgmt/controllers/human_resource.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/src/app/facility_mgmt/controllers/infrastructure.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/src/app/facility_mgmt/controllers/list.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/src/app/facility_mgmt/controllers/module.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/src/app/facility_mgmt/controllers/publish.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/src/app/facility_mgmt/controllers/regulate.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/src/app/facility_mgmt/controllers/upgrade_downgrade.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/src/app/facility_mgmt/directives.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/src/app/facility_mgmt/module.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/src/app/facility_mgmt/services.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/src/app/facility_mgmt/states/approve.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/src/app/facility_mgmt/states/base.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/src/app/facility_mgmt/states/create.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/src/app/facility_mgmt/states/edit.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/src/app/facility_mgmt/states/list.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/src/app/facility_mgmt/states/module.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/src/app/facility_mgmt/states/publish.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/src/app/facility_mgmt/states/regulate.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/src/app/facility_mgmt/states/regulator_sync.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/src/app/facility_mgmt/states/upgrade_downgrade.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/src/app/hr_mgmt/controllers/base.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/src/app/hr_mgmt/controllers/categories.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/src/app/hr_mgmt/controllers/module.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/src/app/hr_mgmt/controllers/specialists.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/src/app/hr_mgmt/module.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/src/app/hr_mgmt/services.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/src/app/hr_mgmt/states.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/src/app/infrastructure_mgmt/controllers/base.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/src/app/infrastructure_mgmt/controllers/categories.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/src/app/infrastructure_mgmt/controllers/infrastructure.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/src/app/infrastructure_mgmt/controllers/module.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/src/app/infrastructure_mgmt/module.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/src/app/infrastructure_mgmt/services.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/src/app/infrastructure_mgmt/states.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/src/app/notifications/controllers.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/src/app/notifications/module.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/src/app/notifications/services.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/src/app/notifications/states.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/src/app/reports/controllers/chul_reporting.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/src/app/reports/controllers/facilities.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/src/app/reports/controllers/facility_bc_reporting.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/src/app/reports/controllers/facility_up_down_grades.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/src/app/reports/controllers/main.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/src/app/reports/controllers/module.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/src/app/reports/module.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/src/app/reports/routes.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/src/app/reports/services.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/src/app/service_mgmt/controllers/base.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/src/app/service_mgmt/controllers/categories.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/src/app/service_mgmt/controllers/module.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/src/app/service_mgmt/controllers/options.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/src/app/service_mgmt/controllers/services.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/src/app/service_mgmt/module.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/src/app/service_mgmt/services.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/src/app/service_mgmt/states.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/src/app/setup/controllers/chu.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/src/app/setup/controllers/constituency.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/src/app/setup/controllers/contacts.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/src/app/setup/controllers/controllers.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/src/app/setup/controllers/county.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/src/app/setup/controllers/documents.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/src/app/setup/controllers/facilities.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/src/app/setup/controllers/keph.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/src/app/setup/controllers/sub_counties.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/src/app/setup/controllers/town.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/src/app/setup/controllers/ward.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/src/app/setup/modules.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/src/app/setup/routes/chu.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/src/app/setup/routes/contacts.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/src/app/setup/routes/contituencies.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/src/app/setup/routes/counties.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/src/app/setup/routes/dashboard.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/src/app/setup/routes/documents.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/src/app/setup/routes/facilities.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/src/app/setup/routes/keph.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/src/app/setup/routes/routes.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/src/app/setup/routes/sub_counties.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/src/app/setup/routes/towns.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/src/app/setup/routes/wards.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/src/app/setup/services/services.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/src/app/users/controllers/groups.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/src/app/users/controllers/module.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/src/app/users/controllers/profile.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/src/app/users/controllers/users.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/src/app/users/module.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/src/app/users/services.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/src/app/users/states/groups.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/src/app/users/states/module.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/src/app/users/states/profile.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/src/app/users/states/users.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/templates-common.js"></script>
+<script type="text/javascript" src="https://admin.kmhfltest.health.go.ke/templates-app.js"></script>
+<!--         <script src="https://maps.google.com/maps/api/js?v=3&sensor=false"></script> -->
+<toasty></toasty>
+
+
+
+</body>
+</html>
