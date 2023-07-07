@@ -2,7 +2,7 @@
 
 Team Freaks:
 
-    https://github.com/d-captainkenya
+    https://github.com/d-c4ptain
 
     https://github.com/nimrodouko
 
